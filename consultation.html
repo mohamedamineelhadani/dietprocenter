@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Consultation — DietProCenter</title>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">diet<span>pro</span>center</a>
+        <ul id="ul">
+            <li><a href="index.html">accueil</a></li>
+            <li><a href="a-propos.html">à propos</a></li>
+            <li><a href="consultation.html" class="is-current">consultation</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li id="imc"><a href="index.html#section2">calculez votre IMC</a></li>
+            <li><button id="toggle-theme">Thème</button></li>
+        </ul>
+        <a href="index.html#section2"><button class="btn_imc">Calculez votre IMC</button></a>
+        <button id="btn_menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <section class="page-hero">
+        <span class="eyebrow">Prise de rendez-vous</span>
+        <h1>Réservez votre première consultation</h1>
+        <p>Remplissez ce formulaire, notre équipe vous recontacte sous 24h ouvrées pour confirmer votre créneau.</p>
+    </section>
+
+    <section class="section-block" style="padding-top: 0;">
+        <form id="consultation-form" class="form-card reveal">
+            <div class="form-row">
+                <div class="field">
+                    <label for="c-firstname">Prénom</label>
+                    <input id="c-firstname" name="firstname" type="text" required>
+                </div>
+                <div class="field">
+                    <label for="c-lastname">Nom</label>
+                    <input id="c-lastname" name="lastname" type="text" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="field">
+                    <label for="c-email">Email</label>
+                    <input id="c-email" name="email" type="email" required>
+                </div>
+                <div class="field">
+                    <label for="c-phone">Téléphone</label>
+                    <input id="c-phone" name="phone" type="tel" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="field">
+                    <label for="c-type">Type de consultation</label>
+                    <select id="c-type" name="consultation_type" required>
+                        <option value="">Choisir...</option>
+                        <option value="bilan_initial">Bilan initial</option>
+                        <option value="suivi">Séance de suivi</option>
+                        <option value="sportif">Nutrition sportive</option>
+                        <option value="pediatrique">Suivi pédiatrique</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="c-date">Date souhaitée</label>
+                    <input id="c-date" name="preferred_date" type="date" required>
+                </div>
+            </div>
+            <div class="form-row single">
+                <div class="field">
+                    <label for="c-message">Message (optionnel)</label>
+                    <textarea id="c-message" name="message" placeholder="Précisez votre objectif ou toute information utile"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="form-submit">Envoyer la demande</button>
+            <p class="form-note">Vos informations sont utilisées uniquement pour organiser votre rendez-vous.</p>
+            <div class="form-status"></div>
+        </form>
+    </section>
+
+    <footer>
+        <span>DIETPROCENTER — Tous droits réservés</span>
+        <span class="foot-links">
+            <a href="a-propos.html">À propos</a>
+            <a href="consultation.html">Consultation</a>
+            <a href="contact.html">Contact</a>
+        </span>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>DietProCenter — Nutrition &amp; suivi personnalisé</title>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">diet<span>pro</span>center</a>
+        <ul id="ul">
+            <li><a href="index.html" class="is-current">accueil</a></li>
+            <li><a href="a-propos.html">à propos</a></li>
+            <li><a href="consultation.html">consultation</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li id="imc"><a href="#section2">calculez votre IMC</a></li>
+            <li><button id="toggle-theme">Thème</button></li>
+        </ul>
+        <a href="#section2"><button class="btn_imc">Calculez votre IMC</button></a>
+        <button id="btn_menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <section class="section1">
+        <div class="content">
+            <div class="content_text">
+                <span class="eyebrow">Diététique &amp; nutrition clinique</span>
+                <h1>Mettre son alimentation au service de sa santé</h1>
+                <p>Un accompagnement personnalisé, fondé sur des données concrètes, pour retrouver un équilibre alimentaire durable — sans régime restrictif ni promesse miracle.</p>
+                <div class="btn_text"><a href="consultation.html"><button>Prendre rendez-vous</button></a></div>
+            </div>
+            <div class="content_img">
+                <div class="img_frame">
+                    <img src="images/photo.png" alt="Diététicienne présentant une assiette de fruits et légumes frais">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section2" id="section2">
+        <div class="content2_text reveal">
+            <span class="eyebrow">Simulateur</span>
+            <h1>Évaluez votre IMC</h1>
+            <p><span>L'indice de masse corporelle (IMC)</span> permet d'évaluer sa corpulence et d'adapter, si besoin, son hygiène de vie, pour éviter de tomber dans le surpoids ou la maigreur. Renseignez votre taille et votre poids ci-contre pour obtenir une première estimation.</p>
+        </div>
+        <div class="form reveal">
+            <div class="form_calcul">
+                <div class="form_title">Calculez votre IMC</div>
+                <div class="form_input_btn">
+                    <input id="height" type="number" placeholder="Votre taille (cm)">
+                    <input id="weight" type="number" placeholder="Votre poids (kg)">
+                    <button onclick="calculateIMC()">Calculer</button>
+                    <input id="result" readonly type="text" placeholder="Résultat de votre IMC">
+                    <input id="advice" readonly type="text" placeholder="Avis de notre expert">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span>DIETPROCENTER — Tous droits réservés</span>
+        <span class="foot-links">
+            <a href="a-propos.html">À propos</a>
+            <a href="consultation.html">Consultation</a>
+            <a href="contact.html">Contact</a>
+        </span>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

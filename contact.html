@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Contact — DietProCenter</title>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">diet<span>pro</span>center</a>
+        <ul id="ul">
+            <li><a href="index.html">accueil</a></li>
+            <li><a href="a-propos.html">à propos</a></li>
+            <li><a href="consultation.html">consultation</a></li>
+            <li><a href="contact.html" class="is-current">contact</a></li>
+            <li id="imc"><a href="index.html#section2">calculez votre IMC</a></li>
+            <li><button id="toggle-theme">Thème</button></li>
+        </ul>
+        <a href="index.html#section2"><button class="btn_imc">Calculez votre IMC</button></a>
+        <button id="btn_menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <section class="page-hero">
+        <span class="eyebrow">Contact</span>
+        <h1>Une question avant de réserver ?</h1>
+        <p>Écrivez-nous, un membre de l'équipe vous répond sous 24h ouvrées.</p>
+    </section>
+
+    <section class="section-block" style="padding-top: 0;">
+        <div class="contact-wrap">
+            <form id="contact-form" class="form-card reveal">
+                <div class="form-row">
+                    <div class="field">
+                        <label for="ct-name">Nom complet</label>
+                        <input id="ct-name" name="name" type="text" required>
+                    </div>
+                    <div class="field">
+                        <label for="ct-email">Email</label>
+                        <input id="ct-email" name="email" type="email" required>
+                    </div>
+                </div>
+                <div class="form-row single">
+                    <div class="field">
+                        <label for="ct-subject">Sujet</label>
+                        <input id="ct-subject" name="subject" type="text" required>
+                    </div>
+                </div>
+                <div class="form-row single">
+                    <div class="field">
+                        <label for="ct-message">Message</label>
+                        <textarea id="ct-message" name="message" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="form-submit">Envoyer le message</button>
+                <div class="form-status"></div>
+            </form>
+
+            <div class="info-list reveal">
+                <div class="info-item">
+                    <span class="label">Adresse</span>
+                    <p>12 rue des Fleurs, Casablanca</p>
+                </div>
+                <div class="info-item">
+                    <span class="label">Téléphone</span>
+                    <p>+212 5 00 00 00 00</p>
+                </div>
+                <div class="info-item">
+                    <span class="label">Email</span>
+                    <p>contact@dietprocenter.com</p>
+                </div>
+                <div class="info-item">
+                    <span class="label">Horaires</span>
+                    <p>Lun – Ven, 9h – 18h</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span>DIETPROCENTER — Tous droits réservés</span>
+        <span class="foot-links">
+            <a href="a-propos.html">À propos</a>
+            <a href="consultation.html">Consultation</a>
+            <a href="contact.html">Contact</a>
+        </span>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
