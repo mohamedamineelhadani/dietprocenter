@@ -34,14 +34,10 @@ dietprocenter/
     ├── update_status.php          Handles the status-change form on consultations.php
     ├── export_consultations.php   Streams consultations as an Excel-openable .xls file
     ├── script.js                   Live search filter shared by consultations.php/contacts.php
-    └── style.css                  Styles for consultations.php / contacts.php
+    └── style.css                  Styles
 ```
 
 ## 1. Set up the database
-
-```
-mysql -u root -p < php/database.sql
-```
 
 This creates the `dietprocenter` database with `contacts`, `consultations`, and `admins`
 tables, and inserts a default admin account.
@@ -51,20 +47,9 @@ defaults (`localhost` / `dietprocenter` / `root` / empty password).
 
 ## 2. Run the site
 
-From the project root:
+## 3. Admin 
 
-```
-php -S localhost:8000
-```
-
-Then open `http://localhost:8000/index.html`. The consultation and contact forms POST
-to `php/consultation_handler.php` / `php/contact_handler.php`, which validate the input
-and insert a row into the database. Submissions are handled with `fetch`, so the page
-doesn't reload — a status message appears under the form instead.
-
-## 3. Admin dashboard
-
-Go to `http://localhost:8000/dashboard/login.php`.
+Go to `http://localhost/admin/login.php`.
 
 **Default login** — change the password after first use:
 - username: `admin`
@@ -82,13 +67,6 @@ What's in the dashboard:
 - **contacts.php** — full list of contact messages, with the same live search, and a
   **Répondre** button per row that opens your email client with the client's address,
   a "Re: <subject>" line, and the original message quoted, ready to send
-
-## Known inconsistency (not yet fixed)
-
-`login.php` and `index.php` still load `dashboard.css`, while `consultations.php` and
-`contacts.php` load the newer `style.css`. Both stylesheets work today, but they've
-diverged slightly — worth consolidating onto one file (`style.css` is the more complete
-one) when you get a chance, so future style changes only need to happen in one place.
 
 ## Security notes for going to production
 
