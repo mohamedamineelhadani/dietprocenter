@@ -1,6 +1,3 @@
--- DietProCenter database schema
--- Import with: mysql -u root -p < database.sql
-
 CREATE DATABASE IF NOT EXISTS dietprocenter CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE dietprocenter;
 
@@ -34,7 +31,6 @@ CREATE TABLE IF NOT EXISTS admins (
 ) ENGINE=InnoDB;
 
 -- Default admin login: username "admin" / password "admin123"
--- Change this password after first login (the hash below is verified to match "admin123").
 INSERT INTO admins (username, password_hash)
 VALUES ('admin', '$2b$12$eAvom.LjUcPewRTmOZ0aQePMe/daVCTM3DvZ5PSNbB0ZUN1jwv2DC')
 ON DUPLICATE KEY UPDATE username = username;

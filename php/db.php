@@ -1,8 +1,4 @@
 <?php
-// ---------------------------------------------------------------
-// Database configuration
-// Update these 4 values to match your MySQL server.
-// ---------------------------------------------------------------
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'dietprocenter');
 define('DB_USER', 'root');

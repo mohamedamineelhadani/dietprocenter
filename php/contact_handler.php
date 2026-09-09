@@ -36,7 +36,6 @@ try {
     ]);
     respond(true, "Merci, votre message a bien été envoyé.");
 } catch (Throwable $e) {
-    // Avoid leaking DB details to the client.
     error_log('contact_handler error: ' . $e->getMessage());
     respond(false, "Une erreur est survenue, merci de réessayer plus tard.");
 }
