@@ -8,24 +8,24 @@ require_once __DIR__ . '/../php/db.php';
 
 $pdo = get_db();
 
-// Counts
+
 $totalConsultations = $pdo->query('SELECT COUNT(*) FROM consultations')->fetchColumn();
 $newConsultations = $pdo->query("SELECT COUNT(*) FROM consultations WHERE status = 'nouveau'")->fetchColumn();
 $totalContacts = $pdo->query('SELECT COUNT(*) FROM contacts')->fetchColumn();
 
 
-// Recent consultations (last 5)
+
 $recentConsultations = $pdo->query(
     'SELECT id, firstname, lastname, email, consultation_type, preferred_date, status 
      FROM consultations ORDER BY created_at DESC LIMIT 5'
 )->fetchAll();
 
-// Recent contacts (last 5)
+
 $recentContacts = $pdo->query(
     'SELECT id, name, email, subject, created_at FROM contacts ORDER BY created_at DESC LIMIT 5'
 )->fetchAll();
 
-// Data for chart: count by consultation_type
+
 $typeStats = $pdo->query(
     'SELECT consultation_type, COUNT(*) as cnt FROM consultations GROUP BY consultation_type'
 )->fetchAll();
@@ -50,7 +50,6 @@ foreach ($typeStats as $row) {
 </head>
 <body>
 <div class="admin-wrapper">
-    <!-- Header -->
     <header class="admin-header">
         <div class="logo">diet<span>pro</span>center</div>
         <div class="user">
@@ -59,14 +58,12 @@ foreach ($typeStats as $row) {
         </div>
     </header>
 
-    <!-- Navigation -->
     <nav class="admin-nav">
         <a href="index.php" class="active">Dashboard</a>
         <a href="consultations.php">Consultations</a>
         <a href="contacts.php">Messages</a>
     </nav>
 
-    <!-- Stats -->
     <div class="stats-grid">
         <div class="stat-card">
             <div class="number"><?= $totalConsultations ?></div>
@@ -87,12 +84,11 @@ foreach ($typeStats as $row) {
     </div>
 
 
-    <!-- Chart -->
     <div style="max-width: 500px; margin-bottom: 40px;">
         <canvas id="typeChart"></canvas>
     </div>
 
-    <!-- Recent Consultations -->
+
     <h2 class="section-title">Dernières consultations</h2>
     <div class="table-wrap">
         <table>
@@ -121,7 +117,6 @@ foreach ($typeStats as $row) {
         </table>
     </div>
 
-    <!-- Recent Contacts -->
     <h2 class="section-title">Derniers messages</h2>
     <div class="table-wrap">
         <table>
@@ -150,7 +145,6 @@ foreach ($typeStats as $row) {
 </div>
 
 <script>
-// Chart
 const ctx = document.getElementById('typeChart').getContext('2d');
 new Chart(ctx, {
     type: 'bar',
